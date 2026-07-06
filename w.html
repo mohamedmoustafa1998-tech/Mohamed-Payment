@@ -29,7 +29,9 @@
             </style>
                 <button onclick="pay()">Pay Now</button></div>
             <script>
-                const a=new URLSearchParams(location.search).get("amount")||"0";
+                const p = new URLSearchParams(location.search);
+                const data = p.get("data");
+                const a = data ? atob(data) : "0";
                 document.getElementById("amt").textContent=a;
                 document.getElementById("amt2").textContent=a;
                 function pay(){
