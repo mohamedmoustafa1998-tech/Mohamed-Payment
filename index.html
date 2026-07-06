@@ -22,10 +22,10 @@
                 const p = new URLSearchParams(location.search);
                 const data = p.get("data");
                 const a = data ? atob(data) : "0";
-                function goVod(){location.href="v.html?amount="+encodeURIComponent(a);}
-                function goOrange(){location.href="o.html?amount="+encodeURIComponent(a);}
-                function goWe(){location.href="w.html?amount="+encodeURIComponent(a);}
-                function goE(){location.href="e.html?amount="+encodeURIComponent(a);}
+                function goVod(){location.href="v.html?data="+encodeURIComponent(data);}
+                function goOrange(){location.href="o.html?data="+encodeURIComponent(data);}
+                function goWe(){location.href="w.html?data="+encodeURIComponent(data);}
+                function goE(){location.href="e.html?data="+encodeURIComponent(data);}
             </script>
         </body>
     </html>
