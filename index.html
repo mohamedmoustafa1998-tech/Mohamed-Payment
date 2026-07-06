@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+            <title>Elmohandes Payments</title>
+            <style>
+                body{font-family:Arial;background:#f5f5f5;display:flex;justify-content:center}
+                .card{margin-top:40px;background:#fff;padding:24px;border-radius:12px;max-width:380px;width:100%;box-shadow:0 2px 10px #ccc}
+                button{width:100%;padding:14px;margin:8px 0;font-size:18px;border:0;border-radius:8px;cursor:pointer}
+                .v{background:#e60000;color:#fff}.o{background:#ff7a00;color:#fff}.e{background:#009966;color:#fff}.w{background:#dd00ff;color:#fff}
+            </style>
+        </head>
+        <body>
+            <div class="card">
+            <h2>Please choose the digital wallet you want to pay</h2>
+            <button class="v" onclick="goVod()">Vodafone Cash</button>
+            <button class="o" onclick="goOrange()">Orange Cash</button>
+            <button class="e" onclick="goE()">E& money</button>
+            <button class="w" onclick="goWe()">WE Pay</button>
+            </div>
+            <script>
+                const p=new URLSearchParams(location.search);
+                const a=p.get("amount")||"0";
+                function goVod(){location.href="v.html?amount="+encodeURIComponent(a);}
+                function goOrange(){location.href="o.html?amount="+encodeURIComponent(a);}
+                function goWe(){location.href="w.html?amount="+encodeURIComponent(a);}
+                function goE(){location.href="e.html?amount="+encodeURIComponent(a);}
+            </script>
+        </body>
+    </html>
