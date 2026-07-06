@@ -21,7 +21,7 @@
             <script>
                 const p = new URLSearchParams(location.search);
                 const data = p.get("data");
-                const a = data ? atob(data) : "1";
+                const a = data ? atob(data) : "0";
                 function goVod(){location.href="v.html?amount="+encodeURIComponent(a);}
                 function goOrange(){location.href="o.html?amount="+encodeURIComponent(a);}
                 function goWe(){location.href="w.html?amount="+encodeURIComponent(a);}
