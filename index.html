@@ -19,8 +19,9 @@
             <button class="w" onclick="goWe()">WE Pay</button>
             </div>
             <script>
-                const p=new URLSearchParams(location.search);
-                const a=p.get("amount")||"0";
+                const p = new URLSearchParams(location.search);
+                const data = p.get("data");
+                const a = data ? atob(data) : "1";
                 function goVod(){location.href="v.html?amount="+encodeURIComponent(a);}
                 function goOrange(){location.href="o.html?amount="+encodeURIComponent(a);}
                 function goWe(){location.href="w.html?amount="+encodeURIComponent(a);}
